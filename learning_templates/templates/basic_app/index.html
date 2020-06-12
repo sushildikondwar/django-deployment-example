@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<!-- APPLYING TEMPLATE INHERITANCE -->
+{% extends "basic_app/base.html" %}
+    {% block body_block %}
+    <h1><u>WELCOME TO INDEX PAGE</u></h1><br><br>
+
+    <!-- APPLYING TEMPLATE FILTERS -->
+        <h2>{{ text|cut:'world' }}  {{ number|add:"1" }}</h2><br><br>
+
+    <h3>/basic_app/relative <a href="{% url 'basic_app:relative' %}">.....relative</a></h3><br>
+    <h3>/basic_app/other <a href="{% url 'basic_app:other' %}">.........other</a></h3><br>
+    <h3>/admin <a href="{% url 'admin:index' %}">.........................admin</a></h3><br>
+    {% endblock %}
